@@ -15,7 +15,7 @@ end
 def set_hcl_attr(node, attr_name, value)
 case value
 when TrueClass, FalseClass
-tfvalue = Tf::Hcl::Boolean.new(value)
+tfvalue = Tf::Hcl::Boolean.new(value) # Using Boolean's
 when Integer
 tfvalue = Tf::Hcl::Integer.new(value)
 when Array
